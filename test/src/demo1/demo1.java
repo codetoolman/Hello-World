@@ -12,7 +12,7 @@ public class demo1 {
         String Pwd="yangfuyang";
         try{
             Class.forName(driverName);
-            System.out.println("驱动加载成功！");
+            System.out.println("驱动加载成功！！");
             connection=DriverManager.getConnection(url,Name,Pwd);
             System.out.println("连接数据库成功");
             PreparedStatement statement=connection.prepareStatement("SELECT sname from Students Where class='03物流1'");
