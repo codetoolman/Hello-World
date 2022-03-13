@@ -6,11 +6,12 @@ import java.util.concurrent.Executor;
 public class demo1 {
     public static void main(String[] args) throws SQLException {
         String driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String url = "jdbc:sqlserver://127.0.0.1:1433;DatabaseName=jxgl_1;";
+        String url = "jdbc:sqlserver://localhost:1433;DatabaseName=jxgl_1;";
         Connection connection = null;// 连接数据库
         String Name="sa";
         String Pwd="yangfuyang";
         try{
+
             Class.forName(driverName);
             System.out.println("驱动加载成功！");
             connection=DriverManager.getConnection(url,Name,Pwd);
@@ -25,7 +26,7 @@ public class demo1 {
         }
         catch(Exception e){
             e.printStackTrace();
-            System.out.println("连接失败");
+            System.out.println(e);
         }
     }
 }
